@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{012B8B46-3E9E-4629-B4A4-A7D334AE4A86}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>chemsim</RootNamespace>
+    <AssemblyName>chemsim</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Debugger.Interop, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VsWebSite.Interop, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baseclass.cs" />
+    <Compile Include="baseprocessclass.cs" />
+    <Compile Include="block.cs" />
+    <Compile Include="chromosome.cs" />
+    <Compile Include="chromosomecomparerfit.cs" />
+    <Compile Include="complex.cs" />
+    <Compile Include="complexcomparer.cs" />
+    <Compile Include="component.cs" />
+    <Compile Include="controlmvsignalsplitter.cs" />
+    <Compile Include="controlmvsignalsplitterproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controlmvsignalsplitterproperties.Designer.cs">
+      <DependentUpon>controlmvsignalsplitterproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlvar.cs" />
+    <Compile Include="coolingtower.cs" />
+    <Compile Include="coolingtowerdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coolingtowerdetail.Designer.cs">
+      <DependentUpon>coolingtowerdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coolingtowerheatexchangersimple.cs" />
+    <Compile Include="coolingtowerheatexchangersimpleproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coolingtowerheatexchangersimpleproperties.Designer.cs">
+      <DependentUpon>coolingtowerheatexchangersimpleproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coolingtowerproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coolingtowerproperties.Designer.cs">
+      <DependentUpon>coolingtowerproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coolingtowersimple.cs" />
+    <Compile Include="coolingtowersimpleproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coolingtowersimpleproperties.Designer.cs">
+      <DependentUpon>coolingtowersimpleproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="distillationcolumn.cs" />
+    <Compile Include="distillationcolumnproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="distillationcolumnproperties.Designer.cs">
+      <DependentUpon>distillationcolumnproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="embeddedtrend.cs" />
+    <Compile Include="exceldataset.cs" />
+    <Compile Include="flange.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ftreactor.cs" />
+    <Compile Include="ftreactorproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ftreactorproperties.Designer.cs">
+      <DependentUpon>ftreactorproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ftreactortrends.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ftreactortrends.Designer.cs">
+      <DependentUpon>ftreactortrends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gaspipe.cs" />
+    <Compile Include="gaspipeproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gaspipeproperties.Designer.cs">
+      <DependentUpon>gaspipeproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="global.cs" />
+    <Compile Include="globaloptionsform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="globaloptionsform.Designer.cs">
+      <DependentUpon>globaloptionsform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="heatexchanger.cs" />
+    <Compile Include="heatexchangerdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="heatexchangerdetail.Designer.cs">
+      <DependentUpon>heatexchangerdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="heatexchangerproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="heatexchangerproperties.Designer.cs">
+      <DependentUpon>heatexchangerproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="heatexchangersimple.cs" />
+    <Compile Include="heatexchangersimpledetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="heatexchangersimpledetail.Designer.cs">
+      <DependentUpon>heatexchangersimpledetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="heatexchangersimpleproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="heatexchangersimpleproperties.Designer.cs">
+      <DependentUpon>heatexchangersimpleproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liquidpipe.cs" />
+    <Compile Include="liquidpipeproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liquidpipeproperties.Designer.cs">
+      <DependentUpon>liquidpipeproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="material.cs" />
+    <Compile Include="materialproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="materialproperties.Designer.cs">
+      <DependentUpon>materialproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="matrix.cs" />
+    <Compile Include="mixer.cs" />
+    <Compile Include="mixerproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mixerproperties.Designer.cs">
+      <DependentUpon>mixerproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="molecule.cs" />
+    <Compile Include="molecules.cs" />
+    <Compile Include="mpcvar.cs" />
+    <Compile Include="nmpc.cs" />
+    <Compile Include="nmpcdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nmpcdetail.Designer.cs">
+      <DependentUpon>nmpcdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nmpcproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nmpcproperties.Designer.cs">
+      <DependentUpon>nmpcproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="particle.cs" />
+    <Compile Include="pidcontroller.cs" />
+    <Compile Include="pidcontrollerproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pidcontrollerproperties.Designer.cs">
+      <DependentUpon>pidcontrollerproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plotz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plotz.Designer.cs">
+      <DependentUpon>plotz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="point.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pump.cs" />
+    <Compile Include="pumpdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pumpdetail.Designer.cs">
+      <DependentUpon>pumpdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pumpproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pumpproperties.Designer.cs">
+      <DependentUpon>pumpproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="selector.cs" />
+    <Compile Include="signal.cs" />
+    <Compile Include="simtimer.cs" />
+    <Compile Include="simulation.cs" />
+    <Compile Include="steamgenerator.cs" />
+    <Compile Include="steamgeneratordetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="steamgeneratordetail.Designer.cs">
+      <DependentUpon>steamgeneratordetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="steamgeneratorproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="steamgeneratorproperties.Designer.cs">
+      <DependentUpon>steamgeneratorproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="steamgenproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="steamgenproperties.Designer.cs">
+      <DependentUpon>steamgenproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stream.cs" />
+    <Compile Include="streamdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="streamdetail.Designer.cs">
+      <DependentUpon>streamdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="streamproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="streamproperties.Designer.cs">
+      <DependentUpon>streamproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tank.cs" />
+    <Compile Include="tankdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tankdetail.Designer.cs">
+      <DependentUpon>tankdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tankproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tankproperties.Designer.cs">
+      <DependentUpon>tankproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tee.cs" />
+    <Compile Include="teeproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teeproperties.Designer.cs">
+      <DependentUpon>teeproperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trend.cs" />
+    <Compile Include="trendvar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trendvar.Designer.cs">
+      <DependentUpon>trendvar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="unitop.cs" />
+    <Compile Include="utilities.cs" />
+    <Compile Include="valve.cs" />
+    <Compile Include="valvedetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="valvedetail.Designer.cs">
+      <DependentUpon>valvedetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="valveproperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="valveproperties.Designer.cs">
+      <DependentUpon>valveproperties.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="controlmvsignalsplitterproperties.resx">
+      <DependentUpon>controlmvsignalsplitterproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coolingtowerdetail.resx">
+      <DependentUpon>coolingtowerdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coolingtowerheatexchangersimpleproperties.resx">
+      <DependentUpon>coolingtowerheatexchangersimpleproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coolingtowerproperties.resx">
+      <DependentUpon>coolingtowerproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coolingtowersimpleproperties.resx">
+      <DependentUpon>coolingtowersimpleproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="distillationcolumnproperties.resx">
+      <DependentUpon>distillationcolumnproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ftreactortrends.resx">
+      <DependentUpon>ftreactortrends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gaspipeproperties.resx">
+      <DependentUpon>gaspipeproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="globaloptionsform.resx">
+      <DependentUpon>globaloptionsform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="heatexchangerdetail.resx">
+      <DependentUpon>heatexchangerdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="heatexchangersimpledetail.resx">
+      <DependentUpon>heatexchangersimpledetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="heatexchangersimpleproperties.resx">
+      <DependentUpon>heatexchangersimpleproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liquidpipeproperties.resx">
+      <DependentUpon>liquidpipeproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="materialproperties.resx">
+      <DependentUpon>materialproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mixerproperties.resx">
+      <DependentUpon>mixerproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nmpcdetail.resx">
+      <DependentUpon>nmpcdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nmpcproperties.resx">
+      <DependentUpon>nmpcproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pidcontrollerproperties.resx">
+      <DependentUpon>pidcontrollerproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plotz.resx">
+      <DependentUpon>plotz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="pumpdetail.resx">
+      <DependentUpon>pumpdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pumpproperties.resx">
+      <DependentUpon>pumpproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="steamgeneratordetail.resx">
+      <DependentUpon>steamgeneratordetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="streamdetail.resx">
+      <DependentUpon>streamdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="streamproperties.resx">
+      <DependentUpon>streamproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tankdetail.resx">
+      <DependentUpon>tankdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tankproperties.resx">
+      <DependentUpon>tankproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teeproperties.resx">
+      <DependentUpon>teeproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trendvar.resx">
+      <DependentUpon>trendvar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="valvedetail.resx">
+      <DependentUpon>valvedetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="valveproperties.resx">
+      <DependentUpon>valveproperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{012B8B46-3E9E-4629-B4A4-A7D334AE4A86}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="chemsim/global.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.chemsim PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
